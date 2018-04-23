@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Some content here Example</title>
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"></script>
+    <script type="text/javascript" src="http://cdn3.devexpress.com/jslib/15.2.9/js/dx.webappjs.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="http://cdn3.devexpress.com/jslib/15.2.9/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn3.devexpress.com/jslib/15.2.9/css/dx.light.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/javascript" src="data.js"></script>
+    <style type="text/css">
+        .fixed-headers {
+            top: 0;
+            position: fixed;
+            width: auto;
+            display: none;
+            z-index: 999;
+        }
+        .dx-datagrid-headers {
+            background-color: white;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />Some content here
+    <div id="gridContainer"></div>
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here<br /><br /><br /><br /><br />
+    Some content here
+    <script type="text/javascript">
+        $("#gridContainer").dxDataGrid({
+            dataSource: generateData(20),
+            customizeColumns: function (columns) {
+                columns[0].width = 70;
+            },
+            loadPanel: {
+                enabled: false
+            },
+            paging: {
+                enabled: false
+            },
+            onContentReady: function (e) {
+                var $header = $('#gridContainer').find(".dx-datagrid-headers");
+                $t_fixed = $header.clone();
+                $t_fixed.addClass("fixed-headers").insertAfter($header);
+                $t_fixed.width($('#gridContainer').width());
+            }
+        });
+
+
+        var $t_fixed;
+
+        $(window).resize(function () {
+            $t_fixed.width($('#gridContainer').width());
+        });
+        $(document).scroll(function () {
+            var grid = $('#gridContainer');
+            if ($(this).scrollTop() >= grid.position().top && $(this).scrollTop() <= (grid.position().top + grid.height() - grid.find(".dx-datagrid-headers").height()))
+                $t_fixed.show();
+            else
+                $t_fixed.hide();
+        })
+
+    </script>
+
+</body>
+</html>
