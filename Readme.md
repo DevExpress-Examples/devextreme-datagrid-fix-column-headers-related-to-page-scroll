@@ -9,7 +9,7 @@
 <!-- default file list end -->
 # dxDataGrid - How to fix column headers related to page scrolling
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/t366788/)**
+**[[Run Online]](https://codecentral.devexpress.com/128583180/)**
 <!-- run online end -->
 
 <br/>
