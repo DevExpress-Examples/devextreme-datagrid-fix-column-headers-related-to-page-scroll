@@ -9,7 +9,8 @@
 ## Files to Review
 
 - **jQuery**
-    - [index.js](jQuery/src/index.js)
+    - [index.html](jQuery/index.html)
+    - [script.js](jQuery/script.js)
 
 ## Documentation
 
