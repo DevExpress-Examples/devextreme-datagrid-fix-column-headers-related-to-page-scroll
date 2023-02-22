@@ -6,6 +6,14 @@
 
 # DecExtreme DataGrid - How to fix column headers related to page scrolling
 
+This example demonstrates how to fix DataGrid column headers related to page scrolling.
+
+<!-- run online -->
+**[[Run Online]](https://codecentral.devexpress.com/128583180/)**
+<!-- run online end -->
+
+<div align="center"><img alt="DecExtreme DataGrid - How to fix column headers related to page scrolling" src="datagrid-fixed-headers.png" /></div>
+
 ## Files to Review
 
 - **jQuery**
@@ -17,9 +25,3 @@
 - [Getting Started with DataGrid](https://js.devexpress.com/Documentation/Guide/UI_Components/DataGrid/Getting_Started_with_DataGrid/)
 
 - [DataGrid - API Reference](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxDataGrid/)
-
-## More Examples
-
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128583180/)**
-<!-- run online end -->
