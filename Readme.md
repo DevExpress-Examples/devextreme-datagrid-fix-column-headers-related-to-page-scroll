@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# DevExtreme DataGrid - How to fix column headers related to page scrolling
+# DataGrid for DevExtreme - How to fix column headers related to page scrolling
 
 This example demonstrates how to fix DataGrid column headers related to page scrolling.
 
